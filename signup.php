@@ -10,7 +10,7 @@ $creditcard = $_POST["creditcard"];
 $password = $_POST["inputPassword"];
 
 
-$sql= "INSERT INTO user(fname, lname, uname, pword)VALUES('$fname', '$lname', '$username', '$password')";
+$sql= "INSERT INTO customer(fname, lname, uname, pword)VALUES('$fname', '$lname', '$username', '$password')";
 if($result=mysql_query($sql))
 {
 ?>
