@@ -28,3 +28,24 @@ CREATE TABLE branch
 	primary key (branchid),
 	FOREIGN KEY (warehouseid) REFERENCES warehouse(warehouseid)
 );
+
+CREATE TABLE orders(
+	custid int,
+	orderid int,
+	dateadded timestamp(12),
+
+	PRIMARY KEY(orderid),
+	FOREIGN KEY(custid) REFERENCES customerinfo.customer(custid)	
+);
+
+CREATE TABLE orderdetails
+(
+	orderid int,
+	itemid int,
+	laptopid int,
+	quantity int(3),
+	price decimal(8,2),
+
+	PRIMARY KEY(custid, orderid, itemid),
+	FOREIGN KEY(orderid) REFERENCES orders(orderid)
+);
