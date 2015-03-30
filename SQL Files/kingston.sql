@@ -4,10 +4,10 @@ USE kingston;
 
 CREATE TABLE laptop 
 (	
-	laptopid int,
-	type varchar(30),
+	laptopid int NOT NULL AUTO_INCREMENT,
+	brand varchar(30),
 	description varchar(100),
-	cost decimal(8,2),
+	price decimal(8,2),
 	primary key (laptopid)
 );
 
