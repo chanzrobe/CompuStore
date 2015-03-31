@@ -186,7 +186,7 @@ License URL: http://creativecommons.org/licenses/by/3.0/
 							<p><span class="rupees">$620.87</span></p>
 					    </div>
 					       		<div class="add-cart">								
-									<h4><a href="preview.html">Add to Cart</a></h4>
+									<h4><a href="checklogin.php">Add to Cart</a></h4>
 							     </div>
 							 <div class="clear"></div>
 					</div>
@@ -200,7 +200,7 @@ License URL: http://creativecommons.org/licenses/by/3.0/
 							<p><span class="rupees">$899.75</span></p>
 					    </div>
 					       		<div class="add-cart">								
-									<h4><a href="preview.html">Add to Cart</a></h4>
+									<h4><a href="checklogin.php">Add to Cart</a></h4>
 							     </div>
 							 <div class="clear"></div>
 					</div>
@@ -214,7 +214,7 @@ License URL: http://creativecommons.org/licenses/by/3.0/
 							<p><span class="rupees">$599.00</span></p>
 					    </div>
 					       		<div class="add-cart">								
-									<h4><a href="preview.html">Add to Cart</a></h4>
+									<h4><a href="checklogin.php">Add to Cart</a></h4>
 							     </div>
 							 <div class="clear"></div>
 					</div>
@@ -227,7 +227,7 @@ License URL: http://creativecommons.org/licenses/by/3.0/
 							<p><span class="rupees">$679.87</span></p>
 					    </div>
 					       		<div class="add-cart">								
-									<h4><a href="preview.html">Add to Cart</a></h4>
+									<h4><a href="checklogin.php">Add to Cart</a></h4>
 							     </div>
 							 <div class="clear"></div>
 					</div>				     
