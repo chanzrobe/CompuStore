@@ -8,29 +8,32 @@ CREATE TABLE laptop
 	brand varchar(30),
 	description varchar(100),
 	price decimal(8,2),
+	amount int,
 
 	primary key (laptopid)
 );
 
-CREATE TABLE warehouse 
-(	
-	warehouseid int,
-	laptopid int,
-	amount int,
+INSERT INTO laptop(brand, description, price, account_amt, pin) VALUES ('Domonic', 'Edwards', 620056781, 56000.00, 1234);
 
-	primary key (warehouseid),
-	FOREIGN KEY (laptopid) REFERENCES laptop(laptopid)
-);
+-- CREATE TABLE warehouse 
+-- (	
+-- 	warehouseid int,
+-- 	laptopid int,
+-- 	amount int,
 
-CREATE TABLE branch 
-(	
-	branchid int,
-	warehouseid int,
-	name varchar(25),
+-- 	primary key (warehouseid),
+-- 	FOREIGN KEY (laptopid) REFERENCES laptop(laptopid)
+-- );
 
-	primary key (branchid),
-	FOREIGN KEY (warehouseid) REFERENCES warehouse(warehouseid)
-);
+-- CREATE TABLE branch 
+-- (	
+-- 	branchid int,
+-- 	warehouseid int,
+-- 	name varchar(25),
+
+-- 	primary key (branchid),
+-- 	FOREIGN KEY (warehouseid) REFERENCES warehouse(warehouseid)
+-- );
 
 CREATE TABLE orders(
 	orderid int,
