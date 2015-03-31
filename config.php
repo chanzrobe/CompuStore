@@ -1,14 +1,12 @@
 <?php
-$currency = '$'; //Currency sumbol or code
+	$user = 'root';
+	$pass = '';
+	$db_name1 = 'kingston';
+	$db_name2 = 'manchester';
+	$db_name3 = 'portland';
+	$host = 'localhost';
 
-$db_username = 'root';
-$db_password = '';
-$db_name1 = 'kingston';
-$db_name2 = 'manchester';
-$db_name3 = 'portland';
-$db_host = 'localhost';
-
-$mysqli1 = new mysqli($db_host, $db_username, $db_password,$db_name1);
-$mysqli2 = new mysqli($db_host, $db_username, $db_password,$db_name2);
-$mysqli3 = new mysqli($db_host, $db_username, $db_password,$db_name3);
+	$connection1 = mysqli_connect($host, $user, $pass, $db_name1)or die(mysql_error());
+	$connection2 = mysqli_connect($host, $user, $pass, $db_name2)or die(mysql_error());
+	$connection3 = mysqli_connect($host, $user, $pass, $db_name3)or die(mysql_error());
 ?>
