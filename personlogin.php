@@ -121,7 +121,9 @@ License URL: http://creativecommons.org/licenses/by/3.0/
                 <input name="UserName" type="text" placeholder="Email" class="field" id="UserName">
                 <input name="password" type="password" placeholder="password" class="field" id="password"></br>
                  <p class="note">If you forgot your passoword just enter your email and click <a href="#">here</a></p></br>
-                <div class="buttons"><div><button class="grey" type="submit">Begin Shopping</button></div></div>
+                <div class="buttons"><div><button class="grey" type="submit">Begin Shopping</button></div></div></br>
+
+                <p class="note">Not an existing customer. <a href="register.php">Sign-up here</a></p></br>
             </form>
         </div>
        <div class="clear"></div>

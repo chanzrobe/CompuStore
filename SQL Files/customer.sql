@@ -18,18 +18,18 @@ CREATE TABLE customer
 
 );
 
-create table customerpurchase
-(
-	tracking_num int AUTO_INCREMENT NOT NULL ,    /*purchase id*/
-	custid int,
-	laptopid int,
-	totalcost float(8,2),
-	primary key (tracking_num),
-	FOREIGN KEY (custid) REFERENCES customer(custid),
-	FOREIGN KEY (laptopid) REFERENCES kingston.laptop(laptopid),
-	FOREIGN KEY (laptopid) REFERENCES portland.laptop(laptopid),
-	FOREIGN KEY (laptopid) REFERENCES manchester.laptop(laptopid)
-);
+-- create table customerpurchase
+-- (
+-- 	tracking_num int AUTO_INCREMENT NOT NULL ,    /*purchase id*/
+-- 	custid int,
+-- 	laptopid int,
+-- 	totalcost float(8,2),
+-- 	primary key (tracking_num),
+-- 	FOREIGN KEY (custid) REFERENCES customer(custid),
+-- 	FOREIGN KEY (laptopid) REFERENCES kingston.laptop(laptopid),
+-- 	FOREIGN KEY (laptopid) REFERENCES portland.laptop(laptopid),
+-- 	FOREIGN KEY (laptopid) REFERENCES manchester.laptop(laptopid)
+-- );
 
 -- create table courses
 -- 	(
