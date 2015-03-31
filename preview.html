@@ -4,6 +4,11 @@ Author URL: http://w3layouts.com
 License: Creative Commons Attribution 3.0 Unported
 License URL: http://creativecommons.org/licenses/by/3.0/
 -->
+<?php
+session_start();
+include_once("config.php");
+?>
+
 <!DOCTYPE HTML>
 <head>
 <title>Free Home Shoppe Website Template | Preview :: w3layouts</title>
@@ -41,8 +46,8 @@ License URL: http://creativecommons.org/licenses/by/3.0/
 			</div>
 			<div class="account_desc">
 				<ul>
-					<li><a href="#">Register</a></li>
-					<li><a href="#">Login</a></li>
+					<li><a href="register.php">Register</a></li>
+					<li><a href="personlogin.php">Login</a></li>
 					<li><a href="#">Delivery</a></li>
 					<li><a href="#">Checkout</a></li>
 					<li><a href="#">My Account</a></li>
@@ -145,29 +150,16 @@ License URL: http://creativecommons.org/licenses/by/3.0/
 					</div>
 				</div>
 				<div class="desc span_3_of_2">
-					<h2>Lorem Ipsum is simply dummy text </h2>
-					<p>Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod tempor incididunt ut labore.</p>					
+					<h2 name="brand">Lorem Ipsum is simply dummy text </h2>
+					<p name="decription">Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod tempor incididunt ut labore.</p>
+					<input type="hidden" name="laptopid" value=""/>				
 					<div class="price">
-						<p>Price: <span>$500</span></p>
+						<p name="price">Price: <span>$500</span></p>
 					</div>
 					<div class="available">
 						<p>Available Options :</p>
 					<ul>
-						<li>Color:
-							<select>
-							<option>Silver</option>
-							<option>Black</option>
-							<option>Dark Black</option>
-							<option>Red</option>
-						</select></li>
-						<li>Size:<select>
-							<option>Large</option>
-							<option>Medium</option>
-							<option>small</option>
-							<option>Large</option>
-							<option>small</option>
-						</select></li>
-						<li>Quality:<select>
+						<li name="quantity">Quantity:<select>
 							<option>1</option>
 							<option>2</option>
 							<option>3</option>
@@ -184,7 +176,7 @@ License URL: http://creativecommons.org/licenses/by/3.0/
 					    	<li><a href="#"><img src="images/twitter.png" alt="" /></a></li>					    
 			    		</ul>
 					</div>
-					<div class="button"><span><a href="#">Add to Cart</a></span></div>					
+					<div class="button"><span><a href="updatecart.php">Add to Cart</a></span></div>					
 					<div class="clear"></div>
 				</div>
 				 <div class="wish-list">
