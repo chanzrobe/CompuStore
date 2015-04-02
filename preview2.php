@@ -134,14 +134,23 @@ include_once("config.php");
 
 							$query = "SELECT * FROM laptop WHERE laptopid='$id'";
 							$results = mysqli_query($connection1, $query);
+							$results1 = mysqli_query($connection2, $query);
+							$results2 = mysqli_query($connection3, $query);
 
-							if ($results) { 
-								while ($obj = mysqli_fetch_assoc($results)){ ?>	
+							//$query1 = "SELECT * FROM '$results' UNION '$results1' UNION '$results2' ORDER BY amt_in_stock";
+
+							if ($results && $results1 && $results2 ){ 
+								while ($obj = mysqli_fetch_assoc($results)){
+									while ($obj2 = mysqli_fetch_assoc($results1)){
+										while ($obj3 = mysqli_fetch_assoc($results2)){
+											if(($obj['amt_in_stock'] > $obj2['amt_in_stock']) && ($obj['amt_in_stock'] > $obj3['amt_in_stock'])){
+
+									?>	
 									<img src= <?php echo $obj['image'] ?> alt="" /></a>
 							</div>
 					</div>
 					<div class="desc span_3_of_2">
-						<h2> <?php echo $obj['brand'], $obj['model'] ?></h2>
+						<h2> <?php echo $obj['brand']?> <?php $obj['model'] ?></h2>
 						<p><?php echo $obj['description'] ?></p>					
 						<div class="price">
 							<p>Price: <span>$<?php echo $obj['price']?></span></p>
@@ -150,6 +159,37 @@ include_once("config.php");
 							<p>Amount in Stock: <span><?php echo $obj['amt_in_stock']?></span></p>
 								<?php
 								}
+									else if(($obj2['amt_in_stock'] > $obj['amt_in_stock']) && ($obj2['amt_in_stock'] > $obj3['amt_in_stock'])){
+									?>	
+									<img src= <?php echo $obj2['image'] ?> alt="" /></a>
+							</div>
+					</div>
+					<div class="desc span_3_of_2">
+						<h2> <?php echo $obj2['brand']?> <?php $obj2['model'] ?></h2>
+						<p><?php echo $obj2['description'] ?></p>					
+						<div class="price">
+							<p>Price: <span>$<?php echo $obj2['price']?></span></p>
+						</div>
+						<div>
+							<p>Amount in Stock: <span><?php echo $obj2['amt_in_stock']?></span></p>
+								<?php
+								}
+								else{
+									?>	
+									<img src= <?php echo $obj3['image'] ?> alt="" /></a>
+							</div>
+					</div>
+					<div class="desc span_3_of_2">
+						<h2> <?php echo $obj3['brand']?> <?php $obj3['model'] ?></h2>
+						<p><?php echo $obj3['description'] ?></p>					
+						<div class="price">
+							<p>Price: <span>$<?php echo $obj3['price']?></span></p>
+						</div>
+						<div>
+							<p>Amount in Stock: <span><?php echo $obj3['amt_in_stock']?></span></p>
+								<?php
+								}
+								}}}
 							}
 						?>
 						</div>
