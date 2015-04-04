@@ -11,6 +11,6 @@
         <?php
 	}
 	else{
-		header('Location: http://localhost/CompuStore/preview2.php');
+		header('Location: http://localhost/CompuStore/preview.php');
 	}
 ?>

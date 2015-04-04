@@ -27,7 +27,7 @@ License URL: http://creativecommons.org/licenses/by/3.0/
 				<ul>
 					<li><a href="register.php">Register</a></li>
 					<li><a href="personlogin.php">Login</a></li>
-					<li><a href="#">Delivery</a></li>
+					<li><a href="logout.php">Logout</a></li>
 					<li><a href="#">Checkout</a></li>
 					<li><a href="#">My Account</a></li>
 				</ul>
@@ -96,19 +96,12 @@ License URL: http://creativecommons.org/licenses/by/3.0/
 			<div class="header_bottom_left">				
 				<div class="categories">
 				  <ul>
-				  	<h3>Categories</h3>
-				      <li><a href="#">Mobile Phones</a></li>
-				      <li><a href="#">Desktop</a></li>
-				      <li><a href="#">Laptop</a></li>
-				      <li><a href="#">Accessories</a></li>
-				      <li><a href="#">Software</a></li>
-				       <li><a href="#">Sports &amp; Fitness</a></li>
-				       <li><a href="#">Footwear</a></li>
-				       <li><a href="#">Jewellery</a></li>
-				       <li><a href="#">Clothing</a></li>
-				       <li><a href="#">Home Decor &amp; Kitchen</a></li>
-				       <li><a href="#">Beauty &amp; Healthcare</a></li>
-				       <li><a href="#">Toys, Kids &amp; Babies</a></li>
+				  	<h3>SHOP BY BRAND</h3>
+				      <li><a href="#">APPLE</a></li>
+				      <li><a href="#">DELL</a></li>
+				      <li><a href="#">ACER</a></li>
+				      <li><a href="#">LENOVO</a></li>
+				      <li><a href="#">TOSHIBA</a></li>
 				  </ul>
 				</div>					
 	  	     </div>
@@ -157,10 +150,10 @@ License URL: http://creativecommons.org/licenses/by/3.0/
 					<h4>My account</h4>
 						<ul>
 							<li><a href="contact.html">Sign In</a></li>
+							<li><a href="logout.php">Logout</a></li>
 							<li><a href="index.html">View Cart</a></li>
-							<li><a href="#">My Wishlist</a></li>
 							<li><a href="#">Track My Order</a></li>
-							<li><a href="faq.html">Help</a></li>
+							<li><a href="contact.html">Help</a></li>
 						</ul>
 				</div>
 				<div class="col_1_of_4 span_1_of_4">

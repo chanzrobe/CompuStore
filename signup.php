@@ -1,4 +1,5 @@
 <?php
+	include_once("config.php");
 	session_start();
 
 	$Fname = $_POST["FName"];
@@ -10,24 +11,14 @@
 	$country = $_POST["Country"];
 	$creditcard = $_POST["CCard"];
 
-	//echo $_POST["password"];
-
-	$host = 'localhost';   //host name
-    $user = 'root';        //username
-    $pass = '';            //password
-    $db = 'customerinfo';  //Your database name you want to connect to
-
-
-    $connection = mysqli_connect($host, $user, $pass, $db)or die(mysql_error());
-
     $query = "SELECT * FROM `customerinfo`.`customer` WHERE email = '$email' AND password = '$password'";
-    $result1 = mysqli_query($connection, $query);
+    $result1 = mysqli_query($connection4, $query);
 
     $count = mysqli_num_rows($result1);
     if($count == 0){
 
 		$query1 = "INSERT INTO `customerinfo`.`customer` (`custfname`, `custlname`, `email`, `password`, `address`, `city`, `country`, `creditcardnum`) VALUES ('$Fname', '$Lname', '$email', '$password', '$address', '$city', '$country', '$creditcard')";
-		$result2 = mysqli_query($connection, $query1);
+		$result2 = mysqli_query($connection4, $query1);
 
 		if($result2){
 		?>

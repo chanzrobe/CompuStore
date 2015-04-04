@@ -41,7 +41,7 @@
             $_SESSION["username"] = $row['custfname'];
 
             if(isset($_SESSION["laptopid"]) == TRUE){
-                header('Location: http://localhost/CompuStore/preview2.php');
+                header('Location: http://localhost/CompuStore/preview.php');
             }
             else{
                 header('Location: http://localhost/CompuStore/index.php');
