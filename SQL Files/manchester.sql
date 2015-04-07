@@ -2,6 +2,18 @@ DROP DATABASE IF EXISTS manchester;
 CREATE DATABASE manchester;
 USE manchester;
 
+DELIMITER $$
+--
+-- Procedures
+--
+CREATE DEFINER=`root`@`localhost` PROCEDURE `laptopUpdate`(
+IN quantity INT, IN laptop_id INT)
+begin
+UPDATE laptop SET amt_in_stock=amt_in_stock-quantity WHERE laptopid=laptop_id;
+end$$
+
+DELIMITER;
+
 CREATE TABLE laptop 
 (	
 	laptopid int NOT NULL AUTO_INCREMENT,

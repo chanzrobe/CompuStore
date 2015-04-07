@@ -38,7 +38,8 @@
     else{
         while ($row = mysqli_fetch_assoc($result)){
             $_SESSION["user_id"] = $row['custid'];
-            $_SESSION["username"] = $row['custfname'];
+            $_SESSION["userfname"] = $row['custfname'];
+            $_SESSION["userlname"] = $row['custlname'];
 
             if(isset($_SESSION["laptopid"]) == TRUE){
                 header('Location: http://localhost/CompuStore/preview.php');

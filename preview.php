@@ -68,7 +68,7 @@ include_once("config.php");
 					<li><a href="register.php">Register</a></li>
 					<li><a href="personlogin.php">Login</a></li>
 					<li><a href="logout.php">Logout</a></li>
-					<li><a href="#">Checkout</a></li>
+					<li><a href="showcart.php">Checkout</a></li>
 					<li><a href="#">My Account</a></li>
 				</ul>
 			</div>
@@ -76,42 +76,8 @@ include_once("config.php");
 		</div>
 		<div class="header_top">
 			<div class="logo">
-				<a href="index.html"><img src="images/logo.png" alt="" /></a>
+				<a href="index.php"><img src="images/logo.png" alt="" /></a>
 			</div>
-			  <div class="cart">
-			  	   <p>Welcome to our Online Store! <span>Cart:</span><div id="dd" class="wrapper-dropdown-2"> 0 item(s) - $0.00
-			  	   	<ul class="dropdown">
-							<li>you have no items in your Shopping cart</li>
-					</ul></div></p>
-			  </div>
-			  <script type="text/javascript">
-			function DropDown(el) {
-				this.dd = el;
-				this.initEvents();
-			}
-			DropDown.prototype = {
-				initEvents : function() {
-					var obj = this;
-
-					obj.dd.on('click', function(event){
-						$(this).toggleClass('active');
-						event.stopPropagation();
-					});	
-				}
-			}
-
-			$(function() {
-
-				var dd = new DropDown( $('#dd') );
-
-				$(document).click(function() {
-					// all dropdowns
-					$('.wrapper-dropdown-2').removeClass('active');
-				});
-
-			});
-
-		</script>
 	 <div class="clear"></div>
   </div>
 	<div class="header_bottom">
@@ -278,7 +244,7 @@ include_once("config.php");
 						<ul>
 							<li><a href="contact.html">Sign In</a></li>
 							<li><a href="logout.php">Logout</a></li>
-							<li><a href="index.html">View Cart</a></li>
+							<li><a href="showcart.php">View Cart</a></li>
 							<li><a href="#">Track My Order</a></li>
 							<li><a href="contact.html">Help</a></li>
 						</ul>

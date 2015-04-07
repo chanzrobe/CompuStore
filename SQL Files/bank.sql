@@ -9,9 +9,9 @@ CREATE TABLE banker
 	custlname varchar(25),
 	creditcardnum int(16),
 	account_amt decimal(10,2),
-	pin int(4),
 
 	primary key(id)
 );
 
-INSERT INTO banker(custfname, custlname, creditcardnum, account_amt, pin) VALUES ('Domonic', 'Edwards', 620056781, 56000.00, 1234);
+INSERT INTO banker(custfname, custlname, creditcardnum, account_amt) VALUES ('Domonic', 'Edwards', 620056781, 56000.00);
+INSERT INTO banker(custfname, custlname, creditcardnum, account_amt) VALUES ('Anique', 'Graham', 620067562, 1000.00);

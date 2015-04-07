@@ -90,8 +90,8 @@
 				}
 				else{
 					$itemnum = $_SESSION["itemnum"];
-					$query7 = "INSERT INTO orderdetails(`itemnum`, `orderid`, `branchid`, `custid`, `laptopid`, `quantity`, `price`) VALUES ('$itemnum', '$orderid', '$branchid', '$custid', '$laptopid', '$quantity', '$price')";
-					$results2 = mysqli_query($connection4, $query7);
+					//$query7 = "INSERT INTO orderdetails(`itemnum`, `orderid`, `branchid`, `custid`, `laptopid`, `quantity`, `price`) VALUES ('$itemnum', '$orderid', '$branchid', '$custid', '$laptopid', '$quantity', '$price')";
+					$results2 = mysqli_query($connection4, "CALL orderInsert('$itemnum', '$orderid', '$branchid', '$custid', '$laptopid', '$quantity', '$price');");
 					if($results2){
 						echo "success";
 					}
@@ -105,5 +105,5 @@
 			$results = mysqli_query($connection4, $query6);
 		}
 	}
-	header("Location: index.php");
+	header("Location: showcart.php");
 ?>

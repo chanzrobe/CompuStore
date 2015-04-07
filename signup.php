@@ -17,8 +17,10 @@
     $count = mysqli_num_rows($result1);
     if($count == 0){
 
-		$query1 = "INSERT INTO `customerinfo`.`customer` (`custfname`, `custlname`, `email`, `password`, `address`, `city`, `country`, `creditcardnum`) VALUES ('$Fname', '$Lname', '$email', '$password', '$address', '$city', '$country', '$creditcard')";
-		$result2 = mysqli_query($connection4, $query1);
+		/*$query1 = "INSERT INTO `customerinfo`.`customer` (`custfname`, `custlname`, `email`, `password`, `address`, `city`, `country`, `creditcardnum`) VALUES ('$Fname', '$Lname', '$email', '$password', '$address', '$city', '$country', '$creditcard')";
+		$result2 = mysqli_query($connection4, $query1);*/
+
+		$result2 = mysqli_query($connection4, "CALL signupInsert('$Fname', '$Lname', '$email', '$password', '$address', '$city', '$country', '$creditcard');");
 
 		if($result2){
 		?>

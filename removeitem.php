@@ -1,8 +1,9 @@
 <?php
 	include_once("config.php");
 	session_start();
+	$laptopid = $_GET['laptopid'];
 
-	$custid = $_SESSION["custid"];
+	$custid = $_SESSION["user_id"];
 	$orderid = $_SESSION["orderid"];
 
 	if(isset($_SESSION["orderid"])){
